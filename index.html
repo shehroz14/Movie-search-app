@@ -1,68 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Search App</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <header class="header">
-        <h1 class="app-title">Movie Search App</h1>
-        <p class="app-subtitle">Search your favorite movies instantly</p>
-      </header>
-      <main class="main">
-        <section class="search-section">
-          <div class="search-box">
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Search movies..."
-              autocomplete="off"
-            />
-            <button id="searchBtn" class="search-btn">Search</button>
-          </div>
-        </section>
-        <section class="results-section">
-          <div id="statusMessage" class="status-message hidden">
-            Search for a movie to see results.
-          </div>
-          <div id="loadingState" class="status-message loading hidden">
-            Loading...
-          </div>
-          <div id="errorState" class="status-message error hidden">
-            Something went wrong. Please try again.
-          </div>
-          <div id="emptyState" class="status-message empty hidden">
-            No movies found.
-          </div>
-          <div id="movieGrid" class="movie-grid">
-            <article class="movie-card">
-              <div class="movie-poster">
-                <img
-                  class="movie-img"
-                  src="https://unsplash.com/photos/red-and-black-theater-chairs-TFRezw7pQwI"
-                  alt="Movie Poster"
-                />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="app-title">Movie Search App</h1>
+    </header>
+
+    <main class="main">
+      <section class="search-section">
+        <div class="search-box">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search movies..." autocomplete="off" />
+          <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div id="statusMessage" class="status-message hidden">Search for a movie to see results.</div>
+        <div id="loadingState" class="status-message loading hidden">Loading...</div>
+        <div id="errorState" class="status-message error hidden">Something went wrong. Please try again.</div>
+        <div id="emptyState" class="status-message empty hidden">No movies found.</div>
+
+        <div id="movieGrid" class="movie-grid">
+          <article class="movie-card">
+            <div class="movie-poster">
+              <img class="movie-img" src="462393086800801836.jpg" alt="Movie poster" />
+            </div>
+            <div class="movie-content">
+              <h2 class="movie-title">Movie Title</h2>
+              <div class="movie-meta">
+                <span class="movie-year">Movie Year</span> 
+                <span class="movie-rating">Rating</span>
               </div>
-              <div class="movie-content">
-                <h2 class="movie-title">Movie Title</h2>
-                <div class="movie-meta">
-                  <span class="movie-year">2024</span>
-                  <span class="movie-rating">8.5</span>
-                </div>
-                <p class="movie-genre">Action, Adventure</p>
-                <p class="movie-runtime">120 min</p>
-                <p class="movie-description">
-                  Movie description will appear here.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
+              <p class="movie-genre">Genre</p>
+              <p class="movie-runtime">Duration</p>
+              <p class="movie-description">Movie description</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
