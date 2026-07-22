@@ -22,6 +22,13 @@ searchBtn.addEventListener('click', async ()=>{
             `https://www.omdbapi.com/?apikey=${API_KEY}&t=${searchInputValue}`
         );
         const data = await response.json();
+
+        if(data.Response === "False"){
+        emptyState.classList.remove('hidden');
+        return;
+    }
+
+        emptyState.classList.add('hidden');
         
         movieImg.src = data.Poster
         movieTitle.textContent = `Title: ${data.Title}`;
